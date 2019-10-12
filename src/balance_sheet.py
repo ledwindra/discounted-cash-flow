@@ -62,7 +62,6 @@ if __name__ == "__main__":
     dfs = Pool(cpu_count() - 1).map(get_dataframe, get_company())
 
     # concat files into a single DataFrame
-
     df = pandas.concat(dfs, sort=False).reset_index(drop=True)
 
     # merge ticker_code into the DataFrame
