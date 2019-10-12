@@ -1,14 +1,16 @@
 import os
 import pandas
 from multiprocessing import Pool, cpu_count
+from sys import argv
 
+YEAR = argv[1]
 
 def get_company():
     """
     Returns file name for cash flow (coded as "3").
     """
 
-    company_list = [x for x in os.listdir('financial-statements/') if x.endswith('6.csv')]
+    company_list = [x for x in os.listdir('financial-statements/') if x.endswith('{}-Audit-6.csv'.format(YEAR))]
 
     return company_list
 
@@ -69,5 +71,8 @@ if __name__ == "__main__":
     # rename variables into English
     df.columns = get_column().values()
 
+    # add year column
+    df['year'] = YEAR
+
     # save files into a .csv format and remove its index numbers
-    df.to_csv(os.getcwd() + '/sample-output/cash-flow.csv', index=False)
+    df.to_csv(os.getcwd() + '/sample-output/cash-flow-{}.csv'.format(YEAR), index=False)

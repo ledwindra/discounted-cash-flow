@@ -1,14 +1,16 @@
 import os
 import pandas
 from multiprocessing import Pool, cpu_count
+from sys import argv
 
+YEAR = argv[1]
 
 def get_company():
     """
     Returns file name for balance sheet (coded as "2").
     """
 
-    company_list = [x for x in os.listdir('financial-statements/') if x.endswith('2.csv')]
+    company_list = [x for x in os.listdir('financial-statements/') if x.endswith('{}-Audit-2.csv'.format(YEAR))]
 
     return company_list
 
@@ -72,5 +74,8 @@ if __name__ == "__main__":
     # rename variables into English
     df.columns = get_column().values()
 
+    # add year column
+    df['year'] = YEAR
+
     # save files into a .csv format and remove its index numbers
-    df.to_csv(os.getcwd() + '/sample-output/balance-sheet.csv', index=False)
+    df.to_csv(os.getcwd() + '/sample-output/balance-sheet-{}.csv'.format(YEAR), index=False)
