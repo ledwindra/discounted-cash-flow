@@ -34,13 +34,12 @@ def get_dataframe(company_list):
 
     return pandas.read_csv(os.getcwd() + '/financial-statements/{}'.format(company_list))
 
-def get_column_name():
+def get_column():
     """
     Returns a list of columns needed. They are hard-coded for practical purpose because there may be unnecessary columns for the analysis.
     """
 
     column_name = dict({
-        'ticker_code': 'ticker_code',
         'Kas dan setara kas': 'cash_and_equivalents',
         'Piutang usaha pihak ketiga': 'account_receivables_third_party',
         'Piutang usaha pihak berelasi': 'account_receivables_related_party',
@@ -50,14 +49,14 @@ def get_column_name():
         'Jumlah aset': 'total_assets',
         'Jumlah liabilitas jangka pendek': 'total_current_liabilities',
         'Jumlah liabilitas jangka panjang': 'total_non_current_liabilities',
-        'Jumlah ekuitas': 'total_equity'
+        'Jumlah ekuitas': 'total_equity',
+        'ticker_code': 'ticker_code'
     })
 
     return column_name
 
 
 if __name__ == "__main__":
-
     # read csv files using multiprocessing to increase speed
     dfs = Pool(cpu_count() - 1).map(get_dataframe, get_company())
 
@@ -68,22 +67,10 @@ if __name__ == "__main__":
     df = pandas.merge(df, get_ticker_code(), how='inner', left_index=True, right_index=True)
 
     # select only necessary variables
-    df = df.loc[:, df.columns.isin([
-        'ticker_code',
-        'Kas dan setara kas',
-        'Piutang usaha pihak ketiga',
-        'Piutang usaha pihak berelasi',
-        'Jumlah aset lancar',
-        'Aset tetap',
-        'Jumlah aset tidak lancar',
-        'Jumlah aset',
-        'Jumlah liabilitas jangka pendek',
-        'Jumlah liabilitas jangka panjang',
-        'Jumlah ekuitas'
-    ])]
+    df = df.loc[:, df.columns.isin(list(get_column().keys()))]
 
     # rename variables into English
-    df.columns = get_column_name().values()
+    df.columns = get_column().values()
 
     # save files into a .csv format and remove its index numbers
     df.to_csv(os.getcwd() + '/sample-output/balance-sheet.csv', index=False)

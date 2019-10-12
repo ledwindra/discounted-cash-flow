@@ -1,4 +1,4 @@
-ticker_code,cash_and_equivalents,account_receivables_third_party,account_receivables_related_party,total_current_assets,fixed_assets,total_non_current_assets,total_assets,total_current_liabilities,total_non_current_liabilities,total_equity
+cash_and_equivalents,account_receivables_third_party,account_receivables_related_party,total_current_assets,fixed_assets,total_non_current_assets,total_assets,total_current_liabilities,total_non_current_liabilities,total_equity,ticker_code
 49082.0,295436.0,321188.0,4500628.0,10219013.0,22356339.0,26856967,3076530.0,4305915.0,19474522,AALI
 36153782594.0,62755509296.0,6895187401.0,131054988546.0,34237885534.0,387290287543.0,518345276089,188098007408.0,130258818032.0,199988450649,ABBA
 711046435.0,,,,96378948.0,,2890427512,,,1334408933,ABDA
