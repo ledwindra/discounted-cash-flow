@@ -47,6 +47,7 @@ def get_column():
         'Jumlah laba bruto': 'gross_income',
         'Beban penjualan': 'sales_expenses',
         'Beban umum dan administrasi': 'sales_and_admin_expenses',
+        'Beban penyusutan dan amortisasi': 'depreciation_expenses',
         'Jumlah laba (rugi) sebelum pajak penghasilan': 'pretax_income',
         'Pendapatan (beban) pajak': 'tax_expenses',
         'Jumlah laba (rugi) dari operasi yang dilanjutkan': 'after_tax_income_operational',

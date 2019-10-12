@@ -44,6 +44,7 @@ def get_column():
     column_name = dict({
         'Jumlah arus kas bersih yang diperoleh dari (digunakan untuk) aktivitas operasi': 'operating_cash_flow',
         'Jumlah arus kas bersih yang diperoleh dari (digunakan untuk) aktivitas investasi': 'investing_cash_flow',
+        'Pembayaran untuk perolehan aset tetap': 'fixed_asset_expenditure',
         'Jumlah arus kas bersih yang diperoleh dari (digunakan untuk) aktivitas pendanaan': 'financing_cash_flow',
         'Kas dan setara kas arus kas, awal periode': 'cash_and_equivalents_beginning',
         'Efek perubahan nilai kurs pada kas dan setara kas': 'fx_rate_effect_on_cash',
