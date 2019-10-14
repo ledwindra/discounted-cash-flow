@@ -3,7 +3,7 @@ Disclaimer: I do not give any investment advice. Bear your own risk!
 
 This repository aims to create financial valuation using discounted cash flow analysis. Use this for your own or your company purposes. Hopefully y'all can make money from this and get rich.
 
-For detailed documentaion, go to the [wiki page](https://github.com/ledwindra/discounted-cash-flow/wiki).
+For detailed documentation, go to the [wiki page](https://github.com/ledwindra/discounted-cash-flow/wiki).
 
 Following are some general ideas regarding discounted cash flow analysis and equity valuation:
 - [Investopedia (article)](https://www.investopedia.com/terms/d/dcf.asp),
