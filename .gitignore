@@ -106,3 +106,7 @@ venv.bak/
 # folders
 financial-statements/*
 notebook/*
+src/*
+
+# file
+run-example.sh
