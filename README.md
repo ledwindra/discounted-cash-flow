@@ -34,10 +34,5 @@ Download and install [Anaconda](https://www.anaconda.com/distribution/) if you h
 pip install -r requirements.txt
 ```
 
-After that, start Jupyter Lab by running the following in your Anaconda Prompt or terminal:
-```
-Jupyter Lab
-```
-
 # Notes
 Honestly there is nothing new in this analysis, methodologically speaking. You can refer to the notebook for the theoretical background, supported by other references that you may find anywhere. However, should you have any inquiry or criticims, drop me an [email](mailto:lukman.edwindra@gmail.com). Hope you enjoy this!
