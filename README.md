@@ -35,4 +35,4 @@ pip install -r requirements.txt
 ```
 
 # Notes
-Honestly there is nothing new in this analysis, methodologically speaking. You can refer to the notebook for the theoretical background, supported by other references that you may find anywhere. However, should you have any inquiry or criticims, drop me an [email](mailto:lukman.edwindra@gmail.com). Hope you enjoy this!
+Honestly there is nothing new in this analysis, methodologically speaking. You can refer to the notebook for the theoretical background, supported by other references that you may find anywhere. However, should you have any inquiry or criticism, drop me an [email](mailto:lukman.edwindra@gmail.com). Hope you enjoy this!
